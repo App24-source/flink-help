@@ -1,0 +1,3 @@
+'use client';
+import {useState,useEffect} from 'react';
+export default function Feedback({slug}){const [vote,setVote]=useState('');useEffect(()=>{try{setVote(localStorage.getItem('flink-help-vote-'+slug)||'')}catch{}},[slug]);function choose(v){setVote(v);try{localStorage.setItem('flink-help-vote-'+slug,v)}catch{}}return <div className="guide-feedback"><p>Ce tutoriel vous a-t-il aidé ?</p><div><button aria-pressed={vote==='yes'} onClick={()=>choose('yes')}>Oui</button><button aria-pressed={vote==='no'} onClick={()=>choose('no')}>Non</button></div>{vote&&<small role="status">Votre choix est enregistré sur cet appareil.</small>}</div>}
