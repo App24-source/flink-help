@@ -1,0 +1,1 @@
+import './globals.css'; export const metadata={title:'Centre d’aide Flink',description:'Retrouvez les guides et tutoriels Flink.'}; export default function Layout({children}){return <html lang="fr"><body>{children}</body></html>}
